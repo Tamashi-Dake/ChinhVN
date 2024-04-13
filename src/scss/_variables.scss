@@ -1,0 +1,65 @@
+$themes-light: (
+  text: #000000,
+  background: #f9fbfb,
+  primary: #950e0e,
+  secondary: #da5858,
+  light-secondary: #e64848e6,
+  accent: #5f3f3f,
+);
+$themes-dark: (
+  text: #ffffff,
+  background: #040606,
+  primary: #f16a6a,
+  secondary: #d62e2e,
+  accent: #c0a0a0,
+);
+
+:root {
+  --text-color: #{map-get($themes-light, text)};
+  --background-color: #{map-get($themes-light, background)};
+  --primary-color: #{map-get($themes-light, primary)};
+  --secondary-color: #{map-get($themes-light, secondary)};
+  --light-secondary-color: #{map-get($themes-light, light-secondary)};
+  --accent-color: #{map-get($themes-light, accent)};
+  --neutral-color: #999999;
+  --light-color: #e6e8ea11;
+  --dark-color: #343a40;
+
+  // --success-color: #28a745;
+  // --info-color: #17a2b8;
+  // --warning-color: #ffc107;
+  // --danger-color: #dc3545;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-monospace: "Nunito", monospace;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-sm: 1.25;
+  --border-radius: 0.25rem;
+  --border-width: 1px;
+  --border-color: #dee2e6;
+  --border-radius-lg: 0.3rem;
+  --border-radius-sm: 0.2rem;
+  --transition: all 1s ease-in-out;
+  --transition-base: all 0.3s ease;
+  --transition-fade: opacity 0.15s linear;
+  --transition-collapse: height 0.35s ease;
+  --transition-color: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+  --transition-opacity: opacity 0.3s ease;
+  --transition-transform: transform 0.3s ease;
+  --transition: all 0.3s ease;
+  --white: #fff;
+  --black: #232323;
+}
