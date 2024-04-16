@@ -1,14 +1,22 @@
+import useScrollDirection from "../assets/useScroll";
 import "../scss/header.scss";
-const Header = () => {
+
+const Header = (props) => {
+  const scrollDirection = useScrollDirection();
+  // console.log(scrollDirection);
+  const toggleMode = () => {
+    // eslint-disable-next-line react/prop-types
+    props.setIsDarkMode((prev) => !prev);
+  };
   return (
-    <header>
+    <header className={`${scrollDirection === "down" ? "hide" : "show"}`}>
       <div className="logo">
         <img className="logo-img" src="/images/Dake.png" alt="logo" />
         <h1 className="logo-title">ChinhVN</h1>
       </div>
       <nav className="navigation">
         <div className="nav-link">
-          <a href="/">
+          <a href="/#hero">
             <h2>Home</h2>
           </a>
         </div>
@@ -37,7 +45,9 @@ const Header = () => {
           <a href="/forfun">For fun</a>
         </div> */}
         <div className="nav-link">
-          <button className="toggle-mode">Dark/light</button>
+          <button className="toggle-mode" onClick={toggleMode}>
+            Dark/light
+          </button>
         </div>
       </nav>
     </header>

@@ -1,6 +1,6 @@
 $themes-light: (
   text: #000000,
-  background: #f9fbfb,
+  background: #fff,
   primary: #950e0e,
   secondary: #da5858,
   light-secondary: #e64848e6,
@@ -19,12 +19,11 @@ $themes-dark: (
   --background-color: #{map-get($themes-light, background)};
   --primary-color: #{map-get($themes-light, primary)};
   --secondary-color: #{map-get($themes-light, secondary)};
-  --light-secondary-color: #{map-get($themes-light, light-secondary)};
   --accent-color: #{map-get($themes-light, accent)};
   --neutral-color: #999999;
-  --light-color: #e6e8ea11;
+  --white: #fff;
   --dark-color: #343a40;
-
+  --black: #232323;
   // --success-color: #28a745;
   // --info-color: #17a2b8;
   // --warning-color: #ffc107;
@@ -60,6 +59,17 @@ $themes-dark: (
   --transition-opacity: opacity 0.3s ease;
   --transition-transform: transform 0.3s ease;
   --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --text-color: #{map-get($themes-dark, text)};
+  --background-color: #{map-get($themes-dark, background)};
+  --primary-color: #{map-get($themes-dark, primary)};
+  --secondary-color: #{map-get($themes-dark, secondary)};
+  --accent-color: #{map-get($themes-dark, accent)};
+  --neutral-color: #999999;
+  --light-color: #e6e8ea11;
+  --dark-color: #343a40;
   --white: #fff;
   --black: #232323;
 }
