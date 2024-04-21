@@ -18,8 +18,9 @@
     gap: 2rem;
   }
   .skill-group-title {
-    @include flex(center, center);
-    gap: 1rem;
+    @include flex(start, center);
+    padding: 1rem;
+    gap: 2rem;
     font-size: 1.2rem;
     font-weight: var(--font-weight-bold);
     color: var(--text-color);

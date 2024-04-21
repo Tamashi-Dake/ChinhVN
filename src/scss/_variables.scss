@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+
 $themes-light: (
   text: #000000,
   background: #fff,
@@ -35,6 +37,7 @@ $themes-dark: (
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Nunito", sans-serif;
   --font-family-monospace: "Nunito", monospace;
+  --font-family-accent: "Azeret Mono", monospace;
   --font-size-base: 1rem;
   --font-size-lg: 1.25rem;
   --font-size-sm: 0.875rem;

@@ -4,6 +4,7 @@ import "./scss/app.scss";
 import { useState } from "react";
 import HeroSection from "./components/Hero";
 import SkillSection from "./components/Skill";
+import ProjectSection from "./components/Project";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -13,9 +14,7 @@ const App = () => {
       <main>
         <HeroSection />
         <SkillSection />
-        <section id="projects" className="projects ">
-          aa
-        </section>
+        <ProjectSection />
         <section id="about" className="about "></section>
         <section id="contact" className="contact "></section>
       </main>
