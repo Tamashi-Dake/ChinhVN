@@ -22,7 +22,7 @@ $themes-dark: (
   --primary-color: #{map-get($themes-light, primary)};
   --secondary-color: #{map-get($themes-light, secondary)};
   --accent-color: #{map-get($themes-light, accent)};
-  --neutral-color: #999999;
+  --neutral-color: #9f9f9f;
   --white: #fff;
   --dark-color: #343a40;
   --black: #232323;
@@ -70,7 +70,7 @@ $themes-dark: (
   --primary-color: #{map-get($themes-dark, primary)};
   --secondary-color: #{map-get($themes-dark, secondary)};
   --accent-color: #{map-get($themes-dark, accent)};
-  --neutral-color: #999999;
+  --neutral-color: #9f9f9f;
   --light-color: #e6e8ea11;
   --dark-color: #343a40;
   --white: #fff;

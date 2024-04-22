@@ -1,4 +1,3 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { PiHandWaving } from "react-icons/pi";
 import { SiGoogledocs } from "react-icons/si";
@@ -8,14 +7,16 @@ const HeroSection = () => {
     <section id="hero" className="hero-section ">
       <div className="hero-info">
         <h1 className="hero-title">
-          Hi, I&apos;m <span>Chinh</span> {/* TODO: Jiggle handwave */}
+          Hi, I&apos;m <span className="hero-name">Chinh</span>
           <PiHandWaving
             style={{
+              marginLeft: "1rem",
               display: "inline-block",
               animation: "wiggly 5s ease-in-out infinite ",
             }}
           />
         </h1>
+        <h1 className="hero-subtitle">Web Developer</h1>
         {/* might do: Text animation
           Web Developer
           Frontend Developer
@@ -25,10 +26,10 @@ const HeroSection = () => {
         {/* <h2 className="hero-subtitle">Web Developer</h2> */}
         <div className="hero-desc">
           {" "}
-          I&apos;m Vu Ngoc Chinh. A passionate Web Developer based in Ha Noi,
-          Vietnam. 💻
+          I&apos;m Vu Ngoc Chinh. A passionate Web Developer with a strong focus
+          on Frontend Development based in Ha Noi, Vietnam. 💻
         </div>
-        <div className="hero-link">
+        {/* <div className="hero-link">
           <a
             href="https://github.com/Tamashi-Dake"
             target="_blank"
@@ -43,26 +44,17 @@ const HeroSection = () => {
           >
             <FaLinkedin className="hero-link-icon" />
           </a>
-        </div>
+        </div> */}
         <div className="hero-btns">
-          <a className="btn">
+          <a href="mailto:tamashidake00@gmail.com" className="btn">
             <MdMail className="btn-icon" />
             <p>Contact me</p>
           </a>
-          <a className="btn">
+          <a href="#" className="btn">
             <SiGoogledocs className="btn-icon" />
             <p>My Resume</p>
           </a>
         </div>
-      </div>
-      <div className="hero-img-container">
-        {/* placeholder image */}
-        <img
-          // src="https://i.imgur.com/dsFKDfU.jpeg"
-          src="https://via.placeholder.com/400"
-          alt="hero"
-          className="hero-img"
-        />
       </div>
     </section>
   );

@@ -1,0 +1,52 @@
+@import "variables";
+@import "mixins";
+
+// .contact-container {
+//   .section-title {
+//     @include flex(space-around, center);
+//     flex-flow: row wrap;
+//   }
+// }
+
+.contact-links {
+  @include flex(center, center);
+  gap: 5rem;
+  margin: auto;
+  max-width: 900px;
+  position: relative;
+  a {
+    @include flex(center, center);
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: 0.8;
+    .wapper {
+      @include flex(center, center);
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    &:hover {
+      opacity: 1;
+      color: var(--secondary-color);
+    }
+    .contact-link-icon {
+      font-size: 3rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+// .cta {
+//   background: var(--secondary-color);
+//   color: var(--white);
+//   padding: 1rem 2rem;
+//   border-radius: 0.5rem;
+//   &:hover {
+//     background: var(--primary-color);
+//   }
+// }
+
+// #cta {
+//   position: absolute;
+// }

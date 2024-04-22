@@ -10,7 +10,7 @@
 }
 .skill-group {
   display: grid;
-  grid-template-columns: minmax(100px, 200px) minmax(200px, 1fr);
+  grid-template-columns: minmax(100px, 300px) minmax(200px, 1fr);
   .skill-list {
     @include flex(start, center);
     flex-flow: row wrap;
@@ -18,7 +18,7 @@
     gap: 2rem;
   }
   .skill-group-title {
-    @include flex(start, center);
+    @include flex(center, center);
     padding: 1rem;
     gap: 2rem;
     font-size: 1.2rem;

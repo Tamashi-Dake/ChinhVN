@@ -3,7 +3,7 @@
 @import "animations";
 
 .hero-section {
-  @include flex(space-between, center);
+  @include flex(center, center);
   gap: 6rem;
   color: var(--text-color);
   text-align: center;
@@ -12,14 +12,27 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 1.6rem;
-    max-width: 550px;
+    max-width: 700px;
     text-align: left;
-    h1 {
-      font-size: 4rem;
+    .hero-title {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 3rem;
+      font-weight: 600;
       line-height: 0.9;
       // margin-bottom: -5px;
+      .hero-name {
+        font-size: 3.5rem;
+        color: var(--secondary-color);
+        font-weight: var(--font-weight-bold);
+      }
     }
-
+    .hero-subtitle {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 0.9;
+      color: var(--neutral-color);
+    }
     h2,
     .hero-desc {
       line-height: 1.8;
@@ -28,22 +41,22 @@
     // .hero-desc {
     // margin-bottom: 1rem;
     // }
-    .hero-link {
-      @include flex(start, center);
-      gap: 2rem;
-      a {
-        text-decoration: none;
-        color: var(--neutral-color);
-        opacity: 0.8;
-        &:hover {
-          opacity: 1;
-          color: var(--secondary-color);
-        }
-        .hero-link-icon {
-          font-size: 2.5rem;
-        }
-      }
-    }
+    // .hero-link {
+    //   @include flex(start, center);
+    //   gap: 2rem;
+    //   a {
+    //     text-decoration: none;
+    //     color: var(--neutral-color);
+    //     opacity: 0.8;
+    //     &:hover {
+    //       opacity: 1;
+    //       color: var(--secondary-color);
+    //     }
+    //     .hero-link-icon {
+    //       font-size: 2.5rem;
+    //     }
+    //   }
+    // }
     .hero-btns {
       @include flex(start, center);
       gap: 2rem;
@@ -69,24 +82,6 @@
           background-color: transparent;
         }
       }
-    }
-  }
-  .hero-img-container {
-    flex-shrink: 0;
-    border-radius: 55% 45% 30% 65% / 60% 35% 70% 40%;
-    overflow: hidden;
-    border: 5px solid var(--black);
-    height: 350px;
-    animation: bubble 8s ease-in-out infinite;
-    transition: var(--transition);
-    img {
-      object-fit: cover;
-      object-position: center;
-      // margin-top: 2.5rem;
-      height: 350px;
-      width: 300px;
-      margin: 0;
-      // border-radius: 500px;
     }
   }
 }

@@ -1,0 +1,48 @@
+@import "mixins";
+@import "variables";
+@import "animations";
+
+.about-container {
+  @include flex(center, center);
+  gap: 6rem;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.5rem;
+}
+.about-content {
+  @include flex(center, center);
+  flex-flow: column;
+  gap: 2rem;
+
+  .about-text {
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 1.75;
+    max-width: 45ch;
+  }
+}
+.hero-img-container {
+  flex-shrink: 0;
+  //   border-radius: 55% 45% 30% 65% / 60% 35% 70% 40%;
+  border: 5px solid var(--text-color);
+  height: 320px;
+  //   animation: bubble 8s ease-in-out infinite;
+  transition: var(--transition);
+  &:hover {
+    img {
+      translate: 0 0;
+    }
+  }
+  img {
+    object-fit: cover;
+    object-position: center;
+    transition: var(--transition);
+    // margin-top: 2.5rem;
+    height: 100%;
+    width: 300px;
+    // move left and up 1rem
+    translate: -1rem -1.5rem;
+    margin: 0;
+    // border-radius: 500px;
+  }
+}

@@ -70,7 +70,7 @@ const SkillSection = () => {
   ];
   return (
     <section id="technology" className="skill ">
-      <h2 className="">Technology</h2>
+      <h2 className="section-title">Technology</h2>
       <div className="skill-container">
         {skills.map((skill, index) => (
           <div key={index} className="skill-group">

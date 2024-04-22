@@ -24,3 +24,16 @@ main {
     margin: auto;
   }
 }
+
+a {
+  text-decoration: none;
+}
+
+section {
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+}
