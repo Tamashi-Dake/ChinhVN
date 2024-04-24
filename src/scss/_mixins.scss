@@ -1,6 +1,8 @@
-$mobile-width: 480px;
-$tablet-width: 768px;
-$desktop-width: 1024px;
+$breakpoints: (
+  phone: 420px,
+  tablet: 768px,
+  desktop: 1024px,
+);
 
 @mixin flex($justify: center, $align: center) {
   display: flex;
@@ -8,20 +10,15 @@ $desktop-width: 1024px;
   align-items: $align;
 }
 
-@mixin mobile {
-  @media (max-width: #{$mobile -width - 1px}) {
-    @content;
-  }
-}
+@mixin for-size($breakpoint) {
+  //Kiểm tra breakpoint truyền vào có tồn tại không
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Lấy giá trị pixel breakpoint đó
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
 
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
+    //Build media query
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
   }
 }

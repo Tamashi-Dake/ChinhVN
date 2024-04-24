@@ -37,11 +37,103 @@ header {
       }
     }
   }
+
+  .hamburger-navigation {
+    display: none;
+    padding: 0 20px;
+    // .hamburger {
+    //   display: block;
+    //   width: 30px;
+    //   height: 30px;
+    //   cursor: pointer;
+    //   .bar {
+    //     transition: y 300ms ease-in 300ms, rotate 300ms ease-in,
+    //       opacity 0ms 300ms;
+    //     transform-origin: center;
+    //   }
+    // }
+    .line {
+      transition: all 200ms ease-in-out 200ms, rotate 200ms ease-in-out,
+        opacity 0ms 200ms;
+      transform-origin: center;
+    }
+  }
+  .hamburger-navigation[aria-expanded="true"] {
+    .line {
+      transition: all 200ms ease-in-out, rotate 200ms ease-in-out 200ms,
+        opacity 0ms 200ms;
+    }
+    .top {
+      rotate: 45deg;
+    }
+    .middle {
+      opacity: 0;
+    }
+    .bottom {
+      rotate: -45deg;
+    }
+  }
+  .hamburger-navigation[aria-expanded="true"] :is(.top) {
+    transform: translateY(15px);
+  }
+  .hamburger-navigation[aria-expanded="true"] :is(.bottom) {
+    transform: translateY(-15px);
+  }
+  .hamburger-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    z-index: -1;
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    .nav-link {
+      margin: 1rem;
+      a {
+        color: var(--neutral-color);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+  .hamburger-menu[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+  }
+  @include for-size(tablet) {
+    .logo {
+      .logo-title {
+        font-size: 1.5rem;
+      }
+      .logo-img {
+        display: none;
+      }
+    }
+    .navigation {
+      display: none;
+    }
+    .hamburger-navigation {
+      display: block;
+      border: none;
+      z-index: 101;
+    }
+  }
 }
+
 header * {
   transition: all;
   transition-duration: 300ms;
 }
+
 [data-theme="dark"] header {
   background-color: var(--dark-color);
   border-bottom: 1px solid var(--accent-color);
