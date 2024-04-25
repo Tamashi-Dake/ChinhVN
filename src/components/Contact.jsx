@@ -1,23 +1,10 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import "../scss/contact.scss";
 import { IoMdMail } from "react-icons/io";
+import "../scss/contact.scss";
 const ContactSection = () => {
   return (
     <section id="contact" className="contact-container">
-      <h2 className="section-title">
-        {/* <p
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        > */}
-        Don&apos;t be shy! Hit me up! {/* </p> */}
-        {/* <a href="mailto:tamashidake00@gmail.com" className="contact-link">
-          <button className="cta">Say Hello!</button>
-        </a> */}
-      </h2>
-      {/* email, github, linkedin */}
+      <h2 className="section-title">Don&apos;t be shy! Hit me up!</h2>
       <div className="contact-links">
         <a
           className="contact-link"
@@ -47,11 +34,7 @@ const ContactSection = () => {
             <p>Connect with me</p>
           </div>
         </a>
-        <a
-          //   id="cta"
-          className="contact-link"
-          href="mailto:tamashidake00@gmail.com"
-        >
+        <a className="contact-link" href="mailto:tamashidake00@gmail.com">
           <div className="wapper">
             <IoMdMail className="contact-link-icon" />
           </div>
@@ -59,7 +42,6 @@ const ContactSection = () => {
             <h4>tamashidake00@gmail.com</h4>
             <p>Say hello!</p>
           </div>
-          {/* <button className="cta">Say Hello!</button> */}
         </a>
       </div>
     </section>

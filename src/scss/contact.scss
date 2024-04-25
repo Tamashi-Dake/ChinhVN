@@ -1,25 +1,20 @@
 @import "variables";
 @import "mixins";
 
-// .contact-container {
-//   .section-title {
-//     @include flex(space-around, center);
-//     flex-flow: row wrap;
-//   }
-// }
-
 .contact-links {
   @include flex(center, center);
-  gap: 5rem;
+  gap: 3rem;
   margin: auto;
-  max-width: 900px;
-  position: relative;
+  // max-width: 900px;
+  // position: relative;
   a {
     @include flex(center, center);
+    flex-flow: row wrap;
     gap: 1rem;
     text-decoration: none;
     color: var(--text-color);
     opacity: 0.8;
+
     .wapper {
       @include flex(center, center);
       border-radius: 50%;
@@ -33,20 +28,14 @@
     .contact-link-icon {
       font-size: 3rem;
       padding: 0.5rem;
+      flex-shrink: 0;
     }
   }
+  @include for-size(tablet) {
+    flex-flow: column;
+    align-items: start;
+    gap: 2rem;
+    margin: auto;
+    width: fit-content;
+  }
 }
-
-// .cta {
-//   background: var(--secondary-color);
-//   color: var(--white);
-//   padding: 1rem 2rem;
-//   border-radius: 0.5rem;
-//   &:hover {
-//     background: var(--primary-color);
-//   }
-// }
-
-// #cta {
-//   position: absolute;
-// }

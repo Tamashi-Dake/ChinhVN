@@ -24,15 +24,6 @@ const AboutSection = () => {
             Engineering, majoring in Software Engineering. I am passionate about
             building excellent website that users feel comfort to use.
           </p>
-          {/* <p className="about-text">
-            Here are a few technologies I&apos;ve been working with recently:
-          </p>
-          <ul className="about-list">
-            <li className="about-list-item">JavaScript (ES6+)</li>
-            <li className="about-list-item">TypeScript</li>
-            <li className="about-list-item">React</li>
-            <li className="about-list-item">Next.js</li>
-          </ul> */}
         </div>
         <div className="hero-img-container">
           <img

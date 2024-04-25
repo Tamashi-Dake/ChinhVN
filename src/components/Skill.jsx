@@ -1,8 +1,8 @@
 import { FaGitAlt, FaTools } from "react-icons/fa";
 import {
-  DiGoogleAnalytics,
+  // DiGoogleAnalytics,
   DiMongodb,
-  DiMysql,
+  // DiMysql,
   DiReact,
   DiScrum,
 } from "react-icons/di";
@@ -34,7 +34,7 @@ const SkillSection = () => {
         { name: "ReactJS", icon: <DiReact className="skill-icon" /> },
         { name: "Next.js", icon: <TbBrandNextjs className="skill-icon" /> },
         {
-          name: "Tailwind CSS",
+          name: "TailwindCSS",
           icon: <SiTailwindcss className="skill-icon" />,
         },
         {
@@ -50,7 +50,7 @@ const SkillSection = () => {
         // { name: "Node.js", icon: <FaNodeJs className="skill-icon" /> },
         { name: "MongoDB", icon: <DiMongodb className="skill-icon" /> },
         { name: "Supabase", icon: <SiSupabase className="skill-icon" /> },
-        { name: "MySQL", icon: <DiMysql className="skill-icon" /> },
+        // { name: "MySQL", icon: <DiMysql className="skill-icon" /> },
         { name: "Postman", icon: <SiPostman className="skill-icon" /> },
       ],
     },
@@ -61,10 +61,10 @@ const SkillSection = () => {
         { name: "Git", icon: <FaGitAlt className="skill-icon" /> },
         { name: "Figma", icon: <FiFigma className="skill-icon" /> },
         { name: "Agile-Scrum", icon: <DiScrum className="skill-icon" /> },
-        {
-          name: "Google Analytics",
-          icon: <DiGoogleAnalytics className="skill-icon" />,
-        },
+        // {
+        //   name: "Google Analytics",
+        //   icon: <DiGoogleAnalytics className="skill-icon" />,
+        // },
       ],
     },
   ];

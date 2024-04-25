@@ -28,6 +28,30 @@
       font-size: 2.5rem;
       color: var(--secondary-color);
     }
+    @include for-size(tablet) {
+      gap: 1rem;
+      background-color: var(--background-color);
+      font-size: 1rem;
+      transform: translateY(1rem);
+      width: fit-content;
+      margin: auto;
+      padding: 0;
+      .skill-icon {
+        font-size: 2rem;
+      }
+    }
+    @include for-size(phone) {
+      gap: 1rem;
+      background-color: var(--background-color);
+      font-size: 1rem;
+      transform: translateY(1rem);
+      width: fit-content;
+      margin: auto;
+      padding: 0;
+      .skill-icon {
+        font-size: 2rem;
+      }
+    }
   }
   .skill-item {
     display: flex;
@@ -35,10 +59,10 @@
     align-items: center;
     min-width: 70px;
     box-shadow: var(--background-shadow);
+    border-radius: 1rem;
     &:hover {
       box-shadow: var(--dark-shadow);
       transition: var(--transition);
-
       .skill-icon {
         color: var(--secondary-color);
         transition: var(--transition);
@@ -56,6 +80,33 @@
     p {
       margin-top: 1rem;
       color: var(--text-color);
+    }
+  }
+  @include for-size(tablet) {
+    grid-template-columns: 1fr;
+    .skill-group-title {
+      font-size: 1rem;
+    }
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(90px, 1fr));
+      padding: 2rem 0;
+      gap: 3rem;
+      border: 2px solid var(--secondary-color);
+      border-radius: 1rem;
+      @include for-size(phone) {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 1rem;
+        padding: 2rem 0.5rem;
+      }
+    }
+    .skill-item {
+      .skill-icon {
+        font-size: 2.5rem;
+      }
+      .skill-name {
+        font-size: 1rem;
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "mixins";
 *,
 html {
   box-sizing: border-box;
@@ -22,6 +22,12 @@ main {
     padding: 4rem;
     max-width: 1200px;
     margin: auto;
+    @include for-size(tablet) {
+      padding: 2rem;
+    }
+    @include for-size(phone) {
+      padding: 0.5rem;
+    }
   }
 }
 

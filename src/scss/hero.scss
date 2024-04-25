@@ -84,4 +84,36 @@
       }
     }
   }
+  @include for-size(tablet) {
+    gap: 4rem;
+    .hero-info {
+      line-height: 1.6;
+      .hero-title {
+        font-size: 3rem;
+        line-height: 1.2;
+        .hero-name {
+          font-size: 3.5rem;
+        }
+      }
+      .hero-subtitle {
+        font-size: 2rem;
+      }
+      h2,
+      .hero-desc {
+        font-size: 1.2rem;
+      }
+      .hero-btns {
+        gap: 1.5rem;
+        .btn {
+          padding: 0.5rem 1.25rem;
+          font-size: 1rem;
+          @include for-size(phone) {
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

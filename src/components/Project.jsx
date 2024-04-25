@@ -1,10 +1,11 @@
 import { AiOutlineGlobal } from "react-icons/ai";
-import "../scss/project.scss";
 import { BsGithub } from "react-icons/bs";
 import { DiJava, DiMongodb, DiReact } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiSqlite, SiTailwindcss } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
+
+import "../scss/project.scss";
 const ProjectSection = () => {
   const projects = [
     {
