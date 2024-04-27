@@ -5,8 +5,11 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiSqlite, SiTailwindcss } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
 
+import { useMediaQuery } from "@uidotdev/usehooks";
 import "../scss/project.scss";
 const ProjectSection = () => {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 500px)");
+
   const projects = [
     {
       projectName: "Smuss 🎵",
@@ -28,7 +31,9 @@ const ProjectSection = () => {
       ],
       livePreviewLink: "https://smuss-beta.vercel.app/",
       sourceCodeLink: "https://github.com/Tamashi-Dake/smuss-beta",
-      imageSrc: "https://i.imgur.com/L1MkDtH.png",
+      imageSrc: isSmallDevice
+        ? "/images/smuss-mobile.png"
+        : "/images/smuss.png",
     },
     {
       projectName: "Todenu ⏳",
@@ -50,7 +55,9 @@ const ProjectSection = () => {
       ],
       livePreviewLink: "https://code-menu.vercel.app/",
       sourceCodeLink: "https://github.com/Tamashi-Dake/todenu",
-      imageSrc: "https://i.imgur.com/eLfon6k.png",
+      imageSrc: isSmallDevice
+        ? "/images/todenu-mobile.png"
+        : "/images/todenu.png",
     },
     {
       projectName: "Muss",
@@ -67,7 +74,7 @@ const ProjectSection = () => {
       livePreviewLink: "",
       sourceCodeLink:
         "https://github.com/Tamashi-Dake/Music_Streaming_Services_Android",
-      imageSrc: "https://i.imgur.com/L1MkDtH.png",
+      imageSrc: "/images/Muss-mobile.png",
     },
   ];
   return (
@@ -75,7 +82,9 @@ const ProjectSection = () => {
       <h2 className="section-title">Projects</h2>
       {projects.map((project, index) => (
         <div className="project" key={index}>
-          <div className="project-img">
+          <div
+            className={isSmallDevice ? " project-img-mobile" : "project-img"}
+          >
             <img src={project.imageSrc} alt="Project" />
           </div>
           <div className="project-info">

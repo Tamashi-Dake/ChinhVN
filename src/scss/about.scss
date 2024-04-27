@@ -12,6 +12,9 @@
     flex-flow: column-reverse;
     gap: 2rem;
   }
+  @media screen and (min-width: 48em) and (max-width: 54em) {
+    font-size: 1.25rem;
+  }
 }
 .about-content {
   @include flex(center, center);
@@ -23,6 +26,12 @@
     font-size: 1.5rem;
     line-height: 1.75;
     max-width: 45ch;
+  }
+  // min 768px max 850px
+  @media screen and (min-width: 48em) and (max-width: 54em) {
+    .about-text {
+      font-size: 1rem;
+    }
   }
 }
 .hero-img-container {
