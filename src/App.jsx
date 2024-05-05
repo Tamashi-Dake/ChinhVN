@@ -12,7 +12,8 @@ const App = () => {
 
   return (
     <div data-theme={isDarkMode ? "dark" : "light"}>
-      <Header setIsDarkMode={setIsDarkMode} />
+      {/* <div id="cursor" className="cursor"></div> */}
+      <Header setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode} />
       <main>
         <HeroSection />
         <SkillSection />

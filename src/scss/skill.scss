@@ -3,38 +3,63 @@
 .skill {
   color: var(--text-color);
   .skill-container {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 2rem;
+    @include flex(center, start);
+    flex-flow: row wrap;
+    gap: 0 2rem;
+    @include for-size(tablet) {
+      gap: 1rem;
+    }
   }
 }
 .skill-group {
   display: grid;
-  grid-template-columns: minmax(100px, 300px) minmax(200px, 1fr);
+  grid-template-columns: minmax(100px, 500px);
+  &:nth-child(1) {
+    @include flex(center, center);
+    flex-flow: column wrap;
+    width: 100%;
+  }
+  &:not(:nth-child(1)) {
+    @include flex(space-between, center);
+    flex-flow: column wrap;
+    flex: 1;
+  }
+  // display: flex;
+  // flex-flow: column wrap;
+  // min-width: 200px;
+  // max-width: 300px;
   .skill-list {
-    @include flex(start, center);
+    @include flex(space-around, center);
     flex-flow: row wrap;
-    list-style-type: none;
+    flex-grow: 1;
     gap: 2rem;
+    margin: auto;
+    width: 100%;
+    list-style-type: none;
+    padding: 2rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1rem;
   }
   .skill-group-title {
     @include flex(center, center);
     padding: 1rem;
-    gap: 2rem;
+    gap: 1rem;
+    transform: translateY(2rem);
+    background-color: var(--background-color);
     font-size: 1.2rem;
     font-weight: var(--font-weight-bold);
     color: var(--text-color);
+    width: fit-content;
+    margin: auto;
+
     .skill-icon {
       font-size: 2.5rem;
-      color: var(--secondary-color);
+      color: var(--primary-color);
     }
     @include for-size(tablet) {
-      gap: 1rem;
-      background-color: var(--background-color);
-      font-size: 1rem;
       transform: translateY(1rem);
-      width: fit-content;
-      margin: auto;
+
+      font-size: 1rem;
       padding: 0;
       .skill-icon {
         font-size: 2rem;
@@ -83,19 +108,17 @@
     }
   }
   @include for-size(tablet) {
+    width: 400px;
     grid-template-columns: 1fr;
+
     .skill-group-title {
       font-size: 1rem;
     }
     .skill-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(90px, 1fr));
-      padding: 2rem 0;
-      gap: 3rem;
-      border: 2px solid var(--secondary-color);
-      border-radius: 1rem;
+      @include flex(center, start);
+      padding: 2rem 0.5rem;
       @include for-size(phone) {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-template-columns: 1fr;
         gap: 1rem;
         padding: 2rem 0.5rem;
       }
@@ -107,6 +130,12 @@
       .skill-name {
         font-size: 1rem;
       }
+    }
+  }
+  @include for-size(phone) {
+    width: 100%;
+    &:not(:nth-child(1)) {
+      flex: auto;
     }
   }
 }

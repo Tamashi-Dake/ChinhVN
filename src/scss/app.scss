@@ -1,11 +1,54 @@
 @import "variables";
 @import "mixins";
+@import url("https://fonts.googleapis.com/css?family=Inter:700|Inter:400");
+
+body {
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+// h1 {
+//   font-size: 4.21rem; /* 67.36px */
+// }
+
+// h2 {
+//   font-size: 3.158rem; /* 50.56px */
+// }
+
+// h3 {
+//   font-size: 2.369rem; /* 37.92px */
+// }
+
+// h4 {
+//   font-size: 1.777rem; /* 28.48px */
+// }
+
+// h5 {
+//   font-size: 1.333rem; /* 21.28px */
+// }
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
 *,
 html {
   box-sizing: border-box;
   margin: 0;
   scroll-behavior: smooth;
-  scroll-margin: 3rem;
+  scroll-margin: 2rem;
   background: var(--background-color);
 }
 body {
@@ -19,11 +62,11 @@ main {
   max-width: 1600px;
   margin: auto;
   section {
-    padding: 4rem;
+    padding: 2rem;
     max-width: 1200px;
     margin: auto;
     @include for-size(tablet) {
-      padding: 2rem;
+      padding: 1rem;
     }
     @include for-size(phone) {
       padding: 0.5rem;
@@ -39,7 +82,39 @@ section {
   .section-title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--text-color);
+    color: var(--accent-color);
   }
 }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+::-webkit-scrollbar {
+  @include for-size(tablet) {
+    scrollbar-width: thin;
+    scrollbar-color: var(--black) var(--background-color);
+  }
+  @include for-size(phone) {
+    scrollbar-width: none;
+  }
+}
+// .cursor {
+//   /*The position is fixed so it can stay on screen
+//   even when scrolling*/
+//   position: fixed;
+//   width: 15px;
+//   height: 15px;
+//   border-radius: 50%;
+//   background-color: black;
+//   /*To put it on the center of the cursor*/
+//   transform: translate(-50%, -50%);
+//   transition: width 0.3s, height 0.3s;
+//   /* So the JS can work properly*/
+//   pointer-events: none;
+// }

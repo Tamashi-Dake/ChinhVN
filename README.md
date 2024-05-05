@@ -1,8 +1,17 @@
-# React + Vite
+# React + Vite + SCSS
 
 ## Todo
 
-- [ ] Fix responsive for hero section
-- [ ] Check project section
+- [x] Fix Hamburger menu
+- [x] Fix responsive
+
+- [ ] Add Scroll to top button
+- [ ] Add Custom Cursor
+- [ ] Add Animation (Framer Motion)
+
+- [x] Change Dark / Light toggle
+- [ ] Change Logo
+- [ ] Change Favicon
+- [ ] Change Fonts
 
 - [ ] Might use photoshop to make the images more consistent

@@ -1,13 +1,33 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import useScrollDirection from "../assets/useScroll";
 import useBlockScroll from "../assets/useBlockScroll";
 import "../scss/header.scss";
+import ModeSwitch from "./shared/switch";
 
 const Header = (props) => {
   const scrollDirection = useScrollDirection();
   const [blockScroll, allowScroll] = useBlockScroll();
 
   const [isClosed, setIsClosed] = useState(true);
+  const navLinks = [
+    {
+      link: "/#hero",
+      title: "Home",
+    },
+    {
+      link: "/#projects",
+      title: "Projects",
+    },
+    {
+      link: "/#contact",
+      title: "Contact",
+    },
+    {
+      link: "#",
+      title: "Resume",
+    },
+  ];
 
   const handleHamburger = () => {
     setIsClosed((prev) => !prev);
@@ -27,7 +47,6 @@ const Header = (props) => {
   };
 
   const toggleMode = () => {
-    // eslint-disable-next-line react/prop-types
     props.setIsDarkMode((prev) => !prev);
   };
   return (
@@ -38,30 +57,16 @@ const Header = (props) => {
       </div>
 
       <nav className="navigation">
+        {navLinks.map((item, index) => (
+          <div className="nav-link" key={index}>
+            <a href={item.link}>
+              <h2>{item.title}</h2>
+            </a>
+          </div>
+        ))}
+
         <div className="nav-link">
-          <a href="/#hero">
-            <h2>Home</h2>
-          </a>
-        </div>
-        <div className="nav-link">
-          <a href="/#projects">
-            <h2>Projects</h2>
-          </a>
-        </div>
-        <div className="nav-link">
-          <a href="/#contact">
-            <h2>Contact</h2>
-          </a>
-        </div>
-        <div className="nav-link">
-          <a href="#">
-            <h2>Resume</h2>
-          </a>
-        </div>
-        <div className="nav-link">
-          <button className="toggle-mode" onClick={toggleMode}>
-            Dark/light
-          </button>
+          <ModeSwitch toggleMode={toggleMode} isDarkMode={props.isDarkMode} />
         </div>
       </nav>
 
@@ -105,18 +110,13 @@ const Header = (props) => {
       </button>
 
       <nav className="hamburger-menu" id="hamburger-nav">
-        <div className="nav-link">
-          <a href="/#hero">Home</a>
-        </div>
-        <div className="nav-link">
-          <a href="/#projects">Projects</a>
-        </div>
-        <div className="nav-link">
-          <a href="/#contact">Contact</a>
-        </div>
-        <div className="nav-link">
-          <a href="#">Resume</a>
-        </div>
+        {navLinks.map((item, index) => (
+          <div className="nav-link" key={index}>
+            <a href={item.link} onClick={handleHamburger}>
+              <h2>{item.title}</h2>
+            </a>
+          </div>
+        ))}
       </nav>
     </header>
   );

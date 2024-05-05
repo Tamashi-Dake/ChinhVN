@@ -5,6 +5,7 @@
 .about-container {
   @include flex(center, center);
   gap: 6rem;
+  padding: 2rem 0;
   color: var(--text-color);
   text-align: center;
   font-size: 1.5rem;
@@ -29,6 +30,17 @@
   }
   // min 768px max 850px
   @media screen and (min-width: 48em) and (max-width: 54em) {
+    .about-text {
+      font-size: 1.25rem;
+    }
+  }
+  @include for-size(tablet) {
+    .about-text {
+      font-size: 1.25rem;
+      max-width: 100%;
+    }
+  }
+  @include for-size(phone) {
     .about-text {
       font-size: 1rem;
     }

@@ -27,8 +27,8 @@ const AboutSection = () => {
         </div>
         <div className="hero-img-container">
           <img
-            // src="https://i.imgur.com/dsFKDfU.jpeg"
-            src="https://via.placeholder.com/400"
+            src="https://i.imgur.com/dsFKDfU.jpeg"
+            // src="https://via.placeholder.com/400"
             alt="hero"
             className="hero-img"
           />

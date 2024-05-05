@@ -6,7 +6,9 @@ import { SiSqlite, SiTailwindcss } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
 
 import { useMediaQuery } from "@uidotdev/usehooks";
+
 import "../scss/project.scss";
+
 const ProjectSection = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 500px)");
 

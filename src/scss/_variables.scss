@@ -1,19 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
 $themes-light: (
-  text: #000000,
-  background: #fff,
-  primary: #950e0e,
-  secondary: #da5858,
-  light-secondary: #e64848e6,
-  accent: #5f3f3f,
+  // text: #000000,
+  // background: #fff,
+  // primary: #950e0e,
+  // secondary: #da5858,
+  // light-secondary: #e64848e6,
+  // accent: #5f3f3f,
+  text: #05070a,
+  background: #fafafa,
+  primary: #5292dc,
+  secondary: #8cb5e3,
+  light-secondary: #8cb5e3e6,
+  accent: #3c7cc5
 );
 $themes-dark: (
-  text: #ffffff,
-  background: #040606,
-  primary: #f16a6a,
-  secondary: #d62e2e,
-  accent: #c0a0a0,
+  // text: #ffffff,
+  // background: #040606,
+  // primary: #f16a6a,
+  // secondary: #d62e2e,
+  // accent: #c0a0a0,
+  text: #f5f7fa,
+  background: #050505,
+  primary: #2464ae,
+  secondary: #1c4473,
+  accent: #3b7bc4
 );
 
 :root {

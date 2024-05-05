@@ -7,7 +7,7 @@ header {
   margin: auto;
   position: sticky;
   top: 0;
-  padding: 20px;
+  padding: 1rem; // 1rem
   background-color: var(--background-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
@@ -21,6 +21,11 @@ header {
       width: 50px;
       height: 50px;
     }
+    @include for-size(desktop) {
+      .logo-title {
+        font-size: 2rem;
+      }
+    }
   }
   .navigation {
     @include flex(center, center);
@@ -33,6 +38,15 @@ header {
 
         &:hover {
           color: var(--secondary-color);
+        }
+      }
+    }
+    @include for-size(desktop) {
+      gap: 0.5rem;
+      .nav-link {
+        margin: 0 1rem;
+        a {
+          font-size: 0.7rem;
         }
       }
     }
@@ -109,6 +123,9 @@ header {
     opacity: 1;
     z-index: 100;
   }
+  @include for-size(desktop) {
+    padding: 0.75rem;
+  }
   @include for-size(tablet) {
     .logo {
       .logo-title {
@@ -158,4 +175,43 @@ header * {
 }
 .show {
   transform: translateY(0);
+}
+
+.toggle-mode {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.5rem;
+  height: 1.8rem;
+  .switch {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    inset: 0;
+    background-color: gainsboro;
+    border-radius: 1rem;
+    &:before {
+      content: "☀️";
+      position: absolute;
+      top: 0.2rem;
+      left: 0.2rem;
+      width: 1.35rem;
+      height: 1.35rem;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 300ms;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+  &:before {
+    content: "🌙";
+    transform: translateX(1.7rem);
+  }
 }
