@@ -2,14 +2,10 @@
 
 ## Todo
 
-- [x] Fix Hamburger menu
-- [x] Fix responsive
-
-- [ ] Add Scroll to top button
+- [x] Add Scroll to top button
 - [ ] Add Custom Cursor
 - [ ] Add Animation (Framer Motion)
 
-- [x] Change Dark / Light toggle
 - [ ] Change Logo
 - [ ] Change Favicon
 - [ ] Change Fonts

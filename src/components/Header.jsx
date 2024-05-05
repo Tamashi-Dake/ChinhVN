@@ -24,7 +24,7 @@ const Header = (props) => {
       title: "Contact",
     },
     {
-      link: "#",
+      link: "https://drive.google.com/file/d/1ctwiwWY2H_t3VGfoKa-WuWny4JX0R-xU/view?usp=sharing",
       title: "Resume",
     },
   ];
@@ -59,7 +59,11 @@ const Header = (props) => {
       <nav className="navigation">
         {navLinks.map((item, index) => (
           <div className="nav-link" key={index}>
-            <a href={item.link}>
+            <a
+              href={item.link}
+              target={item.link.includes("https") ? "_blank" : ""}
+              rel="noreferrer"
+            >
               <h2>{item.title}</h2>
             </a>
           </div>
@@ -110,9 +114,18 @@ const Header = (props) => {
       </button>
 
       <nav className="hamburger-menu" id="hamburger-nav">
+        <div className="hamburger-mode-switch">
+          <ModeSwitch toggleMode={toggleMode} isDarkMode={props.isDarkMode} />
+        </div>
+
         {navLinks.map((item, index) => (
           <div className="nav-link" key={index}>
-            <a href={item.link} onClick={handleHamburger}>
+            <a
+              href={item.link}
+              onClick={handleHamburger}
+              target={item.link.includes("https") ? "_blank" : ""}
+              rel="noreferrer"
+            >
               <h2>{item.title}</h2>
             </a>
           </div>

@@ -40,4 +40,17 @@
     margin: auto;
     width: fit-content;
   }
+  @include for-size(phone) {
+    gap: 1rem;
+    padding: 0;
+    a {
+      padding: 0.5rem;
+      .contact-link-icon {
+        // font-size: 2rem;
+      }
+      .contact-link-text {
+        font-size: 0.8rem;
+      }
+    }
+  }
 }

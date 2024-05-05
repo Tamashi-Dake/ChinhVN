@@ -7,6 +7,7 @@ import SkillSection from "./components/Skill";
 import ProjectSection from "./components/Project";
 import AboutSection from "./components/About";
 import ContactSection from "./components/Contact";
+import ScrollToTopButton from "./components/shared/scrollBtn";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -20,6 +21,7 @@ const App = () => {
         <ProjectSection />
         <AboutSection />
         <ContactSection />
+        <ScrollToTopButton />
       </main>
     </div>
   );

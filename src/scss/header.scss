@@ -117,6 +117,11 @@ header {
         }
       }
     }
+    .hamburger-mode-switch {
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+    }
   }
   .hamburger-menu[aria-hidden="false"] {
     visibility: visible;

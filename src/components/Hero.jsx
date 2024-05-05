@@ -50,7 +50,12 @@ const HeroSection = () => {
             <MdMail className="btn-icon" />
             <p>Contact me</p>
           </a>
-          <a href="#" className="btn">
+          <a
+            href="https://drive.google.com/file/d/1ctwiwWY2H_t3VGfoKa-WuWny4JX0R-xU/view?usp=sharing"
+            className="btn"
+            target="_blank"
+            rel="noreferrer"
+          >
             <SiGoogledocs className="btn-icon" />
             <p>My Resume</p>
           </a>
