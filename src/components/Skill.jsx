@@ -1,10 +1,11 @@
-import { FaGitAlt, FaTools } from "react-icons/fa";
+import { FaGitAlt, FaNodeJs, FaTools } from "react-icons/fa";
 import {
   // DiGoogleAnalytics,
   DiMongodb,
+  DiMysql,
   // DiMysql,
   DiReact,
-  DiScrum,
+  // DiScrum,
 } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
 import {
@@ -47,11 +48,10 @@ const SkillSection = () => {
       name: "Backend",
       icon: <BsDatabase className="skill-icon" />,
       items: [
-        // { name: "Node.js", icon: <FaNodeJs className="skill-icon" /> },
+        { name: "Node.js", icon: <FaNodeJs className="skill-icon" /> },
         { name: "MongoDB", icon: <DiMongodb className="skill-icon" /> },
         { name: "Supabase", icon: <SiSupabase className="skill-icon" /> },
-        // { name: "MySQL", icon: <DiMysql className="skill-icon" /> },
-        { name: "Postman", icon: <SiPostman className="skill-icon" /> },
+        { name: "MySQL", icon: <DiMysql className="skill-icon" /> },
       ],
     },
     {
@@ -60,7 +60,8 @@ const SkillSection = () => {
       items: [
         { name: "Git", icon: <FaGitAlt className="skill-icon" /> },
         { name: "Figma", icon: <FiFigma className="skill-icon" /> },
-        { name: "Agile-Scrum", icon: <DiScrum className="skill-icon" /> },
+        { name: "Postman", icon: <SiPostman className="skill-icon" /> },
+        // { name: "Agile-Scrum", icon: <DiScrum className="skill-icon" /> },
         // {
         //   name: "Google Analytics",
         //   icon: <DiGoogleAnalytics className="skill-icon" />,

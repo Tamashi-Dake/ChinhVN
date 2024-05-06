@@ -24,7 +24,7 @@ const Header = (props) => {
       title: "Contact",
     },
     {
-      link: "https://drive.google.com/file/d/1ctwiwWY2H_t3VGfoKa-WuWny4JX0R-xU/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1-qgM2MHV-erziXnqW4NYQQ2_fUDRko_M/view?usp=sharing",
       title: "Resume",
     },
   ];
